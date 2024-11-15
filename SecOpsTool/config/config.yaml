@@ -1,0 +1,21 @@
+
+---
+
+### 4. **config/config.yaml**
+
+This is a placeholder configuration file that you can expand upon as your project develops:
+
+```yaml
+# Configuration for SecOpsTool
+
+elasticsearch:
+  host: "localhost"
+  port: 9200
+
+playbooks:
+  - name: "Block IP on Firewall"
+    conditions: "high_severity"
+    action: "block_ip"
+  - name: "Send Email Alert"
+    conditions: "medium_severity"
+    action: "email_alert"
